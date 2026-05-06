@@ -1,9 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
-nav: true
-nav_order: 5
+title: CV
 cv_pdf: CV.pdf # you can also use external links here
 toc:
   sidebar: left
