@@ -2,7 +2,6 @@
 layout: about
 title: About
 permalink: /
-subtitle: Research Trainee at <a href='https://www.basis.ai'>Basis</a>. Incoming ELLIS PhD Student at <a href='https://www.tu-darmstadt.de'>TU Darmstadt</a>.
 
 profile:
   align: right
