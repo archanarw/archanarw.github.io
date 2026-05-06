@@ -1,13 +1,15 @@
 ---
 layout: page
-title: AutumnBench
-description: Benchmark with 43 interactive environments and 129 tasks for evaluating AI agents' ability to learn and reason about world dynamics.
+title: WorldTest & AutumnBench
+description: WorldTest, a protocol for evaluating world-model learning via environment-level queries, instantiated as AutumnBench --- 43 interactive environments and 129 tasks.
 importance: 1
 category: work
 related_publications: [warrier2025benchmarking]
 ---
 
-Created a representation-agnostic benchmark for evaluating world-model learning in AI agents, featuring 43 interactive grid-world environments with 129 tasks across masked-frame prediction, planning, and change detection. Evaluated 517 humans and frontier reasoning models, revealing substantial gaps in AI's world-modeling capabilities {% cite warrier2025benchmarking %}.
+We introduce **WorldTest**, a representation-agnostic protocol for evaluating world-model learning in AI agents. WorldTest moves beyond next-frame prediction by posing *environment-level queries* --- asking whether an agent can predict unobserved states, plan action sequences toward goals, and detect changes in causal dynamics.
+
+We instantiate WorldTest with **AutumnBench**, a suite of 43 interactive grid-world environments and 129 tasks across three families: masked-frame prediction, planning, and predicting changes to causal dynamics. We evaluated 517 human participants and three frontier reasoning models on AutumnBench. Humans outperform the models, and scaling compute improves performance only in some environments --- exposing substantial headroom in world-model learning {% cite warrier2025benchmarking %}.
 
 PS: The games are fun to play --- try them at [autumn.basis.ai](https://autumn.basis.ai)!
 
