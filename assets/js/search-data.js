@@ -56,9 +56,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-benchmarking-world-model-learning-via-environment-level-queries-was-accepted-at-icml-2026-the-paper-introduces-worldtest-a-protocol-for-evaluating-world-model-learning-through-environment-level-queries-that-go-beyond-next-frame-prediction-testing-whether-agents-can-predict-unobserved-states-plan-action-sequences-and-detect-changes-in-dynamics-we-instantiate-worldtest-with-autumnbench-a-suite-of-43-interactive-grid-world-environments-and-129-tasks-across-three-families-masked-frame-prediction-planning-and-predicting-changes-to-causal-dynamics-i-ll-be-presenting-the-poster-at-the-conference",
           title: 'Our paper Benchmarking World-Model Learning via Environment-Level Queries was accepted at ICML 2026....',
           description: "",
-          section: "News",},{id: "projects-autumnbench",
-          title: 'AutumnBench',
-          description: "Benchmark with 43 interactive environments and 129 tasks for evaluating AI agents&#39; ability to learn and reason about world dynamics.",
+          section: "News",},{id: "projects-worldtest-amp-autumnbench",
+          title: 'WorldTest &amp;amp; AutumnBench',
+          description: "WorldTest, a protocol for evaluating world-model learning via environment-level queries, instantiated as AutumnBench --- 43 interactive environments and 129 tasks.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/autumnbench.html";
             },},{id: "projects-counterfactual-fairness",
