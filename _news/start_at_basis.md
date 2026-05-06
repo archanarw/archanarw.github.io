@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started as Research Trainee at Basis, New York, contributing to Project MARA (Modeling, Abstraction, and Reasoning Agents).
+Started as Research Trainee at [Basis](https://www.basis.ai), New York, advised by [Zenna Tavares](https://www.basis.ai/about/people/zenna-tavares/). I'm contributing to [Project MARA](https://www.basis.ai/blog/mara/) (Modeling, Abstraction, and Reasoning Agents), which aims to build AI systems capable of everyday scientific discovery through active experimentation and abstract reasoning.
