@@ -4,28 +4,28 @@
     - name: Full Name
       value: Archana Warrier
     - name: Location
-      value: New York, NY / Kaiserslautern, Germany
+      value: New York City, NY
     - name: Languages
       value: English, Hindi, Malayalam
 
 - title: Education
   type: time_table
   contents:
-    - title: Masters in Computer Science
-      institution: Technische Universität Kaiserslautern (RPTU), Germany
-      year: 2022 - Present
+    - title: Master of Science in Computer Science
+      institution: Technische Universität Kaiserslautern (RPTU)
+      year: Apr 2022 - Dec 2025
       description:
         - Major in automated reasoning and minor in software engineering
-        - Current GPA: 1.6/5.0
+        - GPA: 1.6/5.0
     - title: Bachelor of Technology in Mathematics and Computing
-      institution: Birla Institute of Technology, Mesra, India
-      year: 2018 - 2021
+      institution: Birla Institute of Technology, Mesra
+      year: Jun 2018 - Jun 2021
       description:
         - GPA: 9.02/10
         - Graduated first class with distinction
     - title: Foundational Course in Data Science
-      institution: Indian Institute of Technology Madras, India
-      year: 2021
+      institution: Indian Institute of Technology Madras
+      year: Jan 2021 - Aug 2021
       description:
         - GPA: 9.4/10
 
@@ -33,31 +33,31 @@
   type: time_table
   contents:
     - title: Research Trainee
-      institution: Basis, New York, NY
-      year: 2024 - Present
+      institution: Basis, New York City, NY
+      year: Aug 2024 - Present
       description:
         - Advised by <a href="https://www.basis.ai/about/people/zenna-tavares/">Zenna Tavares</a>
         - Contributing to Project MARA (Modeling, Abstraction, and Reasoning Agents)
     - title: Research Assistant
       institution: DFKI, Kaiserslautern, Germany
-      year: 2022 - 2024
+      year: May 2022 - Jul 2024
       description:
         - Conducted research on probabilistic inference methods and Bayesian machine learning
         - Served as teaching assistant for the 'Machine Learning in Julia' course
     - title: Short-term Research Scholar
-      institution: Columbia University, New York, NY
-      year: 2023
+      institution: Columbia University, New York City, NY
+      year: May 2023 - Oct 2023
       description:
         - Developed a framework that automatically constructs simplified model abstractions to balance computational accuracy with resource constraints
     - title: Research Scholar
-      institution: Columbia University, New York, NY
-      year: 2022
+      institution: Columbia University, New York City, NY
+      year: Sept 2022 - Nov 2022
       description:
         - Implemented parametric inversion in JAX — a program transformation technique that inverts non-injective functions by introducing parameters
         - Demonstrated approach on simulation models, including Lotka-Volterra dynamics
     - title: Student Developer
       institution: Google Summer of Code (Julia Language)
-      year: 2021
+      year: Jun 2021 - Aug 2021
       description:
         - Developed CounterfactualFairness.jl package for counterfactual reasoning methods for algorithmic fairness
         - Implemented multiple fairness criteria, including counterfactual fairness and path-specific effects
@@ -97,11 +97,13 @@
 - title: Publications
   type: time_table
   contents:
-    - title: "Benchmarking World-Model Learning"
-      year: 2025
-    - title: "Had Enough of Experts? Elicitation and Evaluation of Bayesian Priors from LLMs"
+    - title: <a href="/publications/#warrier2026benchmarking">Benchmarking World-Model Learning with Environment-Level Queries</a>
+      institution: Forty-third International Conference on Machine Learning
+      year: 2026
+    - title: <a href="/publications/#selby2024experts">Had Enough of Experts? Elicitation and Evaluation of Bayesian Priors from LLMs</a>
+      institution: NeurIPS 2024 Workshop
       year: 2024
-      
+
 - title: Technical Skills
   type: list
   contents:

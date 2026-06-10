@@ -1,18 +1,18 @@
 {
   "basics": {
     "name": "Archana Warrier",
-    "label": "Computer Science Masters Student",
+    "label": "MSc in Computer Science",
     "image": "",
     "email": "archanarw@gmail.com",
     "phone": "",
     "url": "https://archanarw.github.io/",
-    "summary": "Computer Science Masters Student at Technische Universität Kaiserslautern. Research interests in AI systems for scientific reasoning, probabilistic inference, and world model learning.",
+    "summary": "MSc in Computer Science from Technische Universität Kaiserslautern. Research interests in AI systems for scientific reasoning, probabilistic inference, and world model learning.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "New York",
+      "city": "New York City",
       "countryCode": "US",
-      "region": "New York"
+      "region": "NY"
     },
     "profiles": [
       {
@@ -34,15 +34,15 @@
   },
   "work": [
     {
-      "name": "Basis, New York",
+      "name": "Basis, New York City, NY",
       "position": "Research Trainee",
       "url": "https://basis.ai",
       "startDate": "2024-08-05",
-      "endDate": "",
+      "endDate": "2025-12-31",
         "summary": "Contributing to Project MARA (Modeling, Abstraction, and Reasoning Agents)."
       },
     {
-      "name": "DFKI, Kaiserslautern",
+      "name": "DFKI, Kaiserslautern, Germany",
       "position": "Research Assistant",
       "url": "https://www.dfki.de",
       "startDate": "2022-05-01",
@@ -50,7 +50,7 @@
       "summary": "Conducted research on probabilistic inference methods and Bayesian machine learning. Served as teaching assistant for the ``Machine Learning in Julia'' course."
     },
     {
-      "name": "Columbia University, New York",
+      "name": "Columbia University, New York City, NY",
       "position": "Short-term Research Scholar",
       "url": "https://www.columbia.edu",
       "startDate": "2023-05-01",
@@ -58,7 +58,7 @@
         "summary": "Developed a framework that automatically constructs simplified model abstractions to balance computational accuracy with resource constraints."
       },
     {
-      "name": "Columbia University, New York",
+      "name": "Columbia University, New York City, NY",
       "position": "Short-term Research Scholar",
       "url": "https://www.columbia.edu",
       "startDate": "2022-09-01",
@@ -76,8 +76,7 @@
   ],
   "volunteer": [
     {
-      "organization": "IEEE Student Branch",
-      "location": "BIT Mesra",
+      "organization": "IEEE Student Branch, BIT Mesra, India",
       "position": "Content and Publicity Head",
       "url": "",
       "startDate": "2020-06-01",
@@ -96,18 +95,16 @@
   "education": [
     {
       "institution": "Technische Universität Kaiserslautern (RPTU)",
-      "location": "Kaiserslautern, Germany",
       "url": "https://www.uni-kl.de",
       "area": "Computer Science",
       "studyType": "Master of Science",
       "startDate": "2022-04-01",
-      "endDate": "",
+      "endDate": "2025-12-31",
       "score": "1.6/5.0",
       "courses": ["Machine Learning I & II", "Monte Carlo Algorithms", "Automated Reasoning", "Functional Programming", "3D Computer Vision", "Stochastic Modeling of Cognitive Processes"]
     },
     {
       "institution": "Birla Institute of Technology, Mesra",
-      "location": "Mesra, India",
       "url": "https://www.bitmesra.ac.in",
       "area": "Mathematics and Computing",
       "studyType": "Bachelor of Science",
@@ -150,11 +147,11 @@
   ],
   "publications": [
     {
-      "name": "Benchmarking World-Model Learning",
-      "publisher": "arXiv preprint arXiv:2510.16012",
-      "releaseDate": "2025-10-22",
-      "url": "https://autumn.basis.ai",
-      "summary": "Designed the AutumnBench benchmark for evaluating world model building in interactive agents. Project website: autumn.basis.ai"
+      "name": "Benchmarking World-Model Learning with Environment-Level Queries",
+      "publisher": "Forty-third International Conference on Machine Learning",
+      "releaseDate": "2026-04-30",
+      "url": "https://openreview.net/forum?id=Ny6UYZ8ysN",
+      "summary": "We introduce WorldTest, a framework for evaluating world model learning through environment-level queries about full dynamics, not single trajectories. AutumnBench, instantiated under WorldTest, exposes large human-LLM gaps in world-model building."
     },
     {
       "name": "Had Enough of Experts? Elicitation and Evaluation of Bayesian Priors from LLMs",
@@ -198,7 +195,7 @@
     {
       "name": "Prof. Dr. Sebastian Vollmer",
       "icon": "fa-solid fa-user-graduate",
-      "reference": "Professor at DFKI, Kaiserslautern."
+      "reference": "Professor at DFKI, Kaiserslautern, Germany."
     },
     {
       "name": "Zenna Tavares",

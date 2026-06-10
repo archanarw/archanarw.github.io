@@ -5,21 +5,19 @@
 @string{neurips = {Neural Information Processing Systems,}}
 @string{icml = {International Conference on Machine Learning,}}
 
-@article{warrier2025benchmarking,
-  abbr={ICML},
-  bibtex_show={true},
-  selected={true},
-  title={Benchmarking World-Model Learning with Environment-Level Queries},
-  author={Warrier, Archana and Nguyen, D. and Naim, M. and Jain, M. and Liang, Y. and Schroeder, K. and Yang, C. and Tenenbaum, J. and Vollmer, S. and Ellis, K. and Tavares, Z.},
-  journal={International Conference on Learning Representations},
-  year={2026},
-  abstract={Model-learning agents should gather information to learn world models that support many downstream tasks and inferences, such as predicting unobserved states, estimating near- and far-term consequences of actions, planning action sequences, and detecting changes in dynamics. Current methods for learning and evaluating world models diverge from this goal: training and evaluation are anchored to next-frame prediction, and success is scored by reward maximization in the same environment.
-      We propose WorldTest, a protocol to evaluate model-learning agents that separates reward-free interaction from a scored test phase in a different but related environment.
-      WorldTest is open-ended---models should support many different tasks unknown ahead of time---and agnostic to model representation, allowing comparison across approaches.
-      We instantiated WorldTest with AutumnBench, a suite of 43 interactive grid-world environments and 129 tasks across three families: masked-frame prediction, planning, and predicting changes to the causal dynamics. We compared 517 human participants and three frontier models on AutumnBench. We found that humans outperform the models, and scaling compute improves performance only in some environments but not others.
-      WorldTest provides a novel template---reward-free exploration, derived tests, and behavior-based scoring---to evaluate what agents learn about environment dynamics, and
-      AutumnBench exposes significant headroom in world-model learning.},
-  website={https://autumn.basis.ai}
+@inproceedings{
+warrier2026benchmarking,
+abbr={ICML},
+bibtex_show={true},
+selected={true},
+website={https://autumn.basis.ai},
+poster={../img/icml2026_worldtest_poster.png},
+title={Benchmarking World-Model Learning with Environment-Level Queries},
+author={Archana Warrier and Dat Nguyen and Michelangelo Naim and Moksh Jain and Yichao Liang and Karen Schroeder and Cambridge Yang and Joshua Tenenbaum and Sebastian Vollmer and Kevin Ellis and Zenna Tavares},
+abstract={World models are central to building AI agents capable of flexible reasoning and planning. Yet current evaluations (i) test only properties measurable from observed interactions, such as next-frame prediction or task return, and (ii) do not test whether a learned model supports diverse queries about the environment. In contrast, humans build general-purpose models that can answer many different questions about an environment---including questions that require understanding global structure and counterfactual consequences. We propose *WorldTest*: a protocol for evaluating whether agents learn models that support multiple environment-level queries---questions whose answers depend on properties of the full environment, not just observed trajectories. Individually, these queries can target properties (e.g., reachability or the effects of interventions) that no single rollout distribution determines. Collectively, they assess model generality across query types. We instantiate *WorldTest* as *AutumnBench*, a benchmark of 43 interactive grid-world environments and 129 tasks across three query families for both humans and learning agents. Experiments with 517 human participants and five frontier models on AutumnBench show that humans substantially outperform these models, a gap we attribute to differences in exploration and belief updating.},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=Ny6UYZ8ysN}
 }
 
 @article{selby2024experts,

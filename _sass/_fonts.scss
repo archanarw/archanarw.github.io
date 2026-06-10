@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Self-hosted Bookerly webfont (regular, bold, italic, bold-italic).
+ ******************************************************************************/
+
+@font-face {
+  font-family: "Bookerly";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Bookerly-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bookerly";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Bookerly-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bookerly";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Bookerly-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bookerly";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Bookerly-BoldItalic.woff2") format("woff2");
+}
+
+// Apply Bookerly site-wide, overriding Bootstrap's default sans-serif stack.
+:root {
+  --bs-body-font-family: "Bookerly", Georgia, "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+}

@@ -185,6 +185,20 @@
       {{ entry.note | strip }}
     </div>
 
+    {% assign poster_is_image = false %}
+    {% if entry.poster %}
+      {% assign poster_value = entry.poster | downcase %}
+      {% if poster_value contains '.png' %}
+        {% assign poster_is_image = true %}
+      {% elsif poster_value contains '.jpg' %}
+        {% assign poster_is_image = true %}
+      {% elsif poster_value contains '.jpeg' %}
+        {% assign poster_is_image = true %}
+      {% elsif poster_value contains '.webp' %}
+        {% assign poster_is_image = true %}
+      {% endif %}
+    {% endif %}
+
     <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
@@ -237,7 +251,9 @@
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if entry.poster %}
-        {% if entry.poster contains '://' %}
+        {% if poster_is_image %}
+          <a class="poster btn btn-sm z-depth-0" role="button">Poster</a>
+        {% elsif entry.poster contains '://' %}
           <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
         {% else %}
           <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
@@ -349,7 +365,18 @@
     {% if entry.abstract %}
       <!-- Hidden abstract block -->
       <div class="abstract hidden">
-        <p>{{ entry.abstract }}</p>
+        {{ entry.abstract | markdownify }}
+      </div>
+    {% endif %}
+
+    {% if entry.poster and poster_is_image %}
+      {% if entry.poster contains '://' %}
+        {% assign poster_path = entry.poster %}
+      {% else %}
+        {% assign poster_path = entry.poster | prepend: '/assets/pdf/' | relative_url %}
+      {% endif %}
+      <div class="poster hidden">
+        <img class="img-fluid rounded z-depth-1" src="{{ poster_path }}" alt="{{ entry.title }} poster">
       </div>
     {% endif %}
 
