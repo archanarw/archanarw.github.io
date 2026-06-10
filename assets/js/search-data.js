@@ -18,12 +18,12 @@ ninja.data = [{
           section: "News",},{id: "news-excited-to-share-that-i-ll-be-joining-the-ellis-phd-program-as-an-incoming-phd-student-at-tu-darmstadt-advised-by-angela-yu-in-the-computational-modelling-of-intelligent-systems-lab",
           title: 'Excited to share that I’ll be joining the ELLIS PhD Program as an...',
           description: "",
-          section: "News",},{id: "news-our-paper-benchmarking-world-model-learning-via-environment-level-queries-was-accepted-at-icml-2026-the-paper-introduces-worldtest-a-protocol-for-evaluating-world-model-learning-through-environment-level-queries-that-go-beyond-next-frame-prediction-testing-whether-agents-can-predict-unobserved-states-plan-action-sequences-and-detect-changes-in-dynamics-we-instantiate-worldtest-with-autumnbench-a-suite-of-43-interactive-grid-world-environments-and-129-tasks-across-three-families-masked-frame-prediction-planning-and-predicting-changes-to-causal-dynamics-i-ll-be-presenting-the-poster-at-the-conference",
-          title: 'Our paper Benchmarking World-Model Learning via Environment-Level Queries was accepted at ICML 2026....',
+          section: "News",},{id: "news-our-paper-benchmarking-world-model-learning-with-environment-level-queries-was-accepted-at-icml-2026-the-paper-introduces-worldtest-a-protocol-for-evaluating-world-model-learning-through-environment-level-queries-that-go-beyond-next-frame-prediction-testing-whether-agents-can-predict-unobserved-states-plan-action-sequences-and-detect-changes-in-dynamics-we-instantiate-worldtest-with-autumnbench-a-suite-of-43-interactive-grid-world-environments-and-129-tasks-across-three-families-masked-frame-prediction-planning-and-predicting-changes-to-causal-dynamics-i-ll-be-presenting-the-poster-at-the-conference-in-seoul",
+          title: 'Our paper Benchmarking World-Model Learning with Environment-Level Queries was accepted at ICML 2026....',
           description: "",
           section: "News",},{id: "projects-worldtest-amp-autumnbench",
           title: 'WorldTest &amp;amp; AutumnBench',
-          description: "WorldTest, a protocol for evaluating world-model learning via environment-level queries, instantiated as AutumnBench --- 43 interactive environments and 129 tasks.",
+          description: "We introduce WorldTest, a framework for evaluating world model learning through environment-level queries about full dynamics, not single trajectories. AutumnBench, instantiated under WorldTest, exposes large human-LLM gaps in world-model building.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/autumnbench.html";
             },},{id: "projects-counterfactual-fairness",
@@ -66,13 +66,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/archanarw", "_blank");
-        },
-      },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/archana_rw", "_blank");
         },
       },{
       id: 'light-theme',
