@@ -39,8 +39,8 @@
       "url": "https://basis.ai",
       "startDate": "2024-08-05",
       "endDate": "2025-12-31",
-        "summary": "Contributing to Project MARA (Modeling, Abstraction, and Reasoning Agents)."
-      },
+      "summary": "Contributing to Project MARA (Modeling, Abstraction, and Reasoning Agents)."
+    },
     {
       "name": "DFKI, Kaiserslautern, Germany",
       "position": "Research Assistant",
@@ -55,8 +55,8 @@
       "url": "https://www.columbia.edu",
       "startDate": "2023-05-01",
       "endDate": "2023-10-31",
-        "summary": "Developed a framework that automatically constructs simplified model abstractions to balance computational accuracy with resource constraints."
-      },
+      "summary": "Developed a framework that automatically constructs simplified model abstractions to balance computational accuracy with resource constraints."
+    },
     {
       "name": "Columbia University, New York City, NY",
       "position": "Short-term Research Scholar",
@@ -101,7 +101,14 @@
       "startDate": "2022-04-01",
       "endDate": "2025-12-31",
       "score": "1.6/5.0",
-      "courses": ["Machine Learning I & II", "Monte Carlo Algorithms", "Automated Reasoning", "Functional Programming", "3D Computer Vision", "Stochastic Modeling of Cognitive Processes"]
+      "courses": [
+        "Machine Learning I & II",
+        "Monte Carlo Algorithms",
+        "Automated Reasoning",
+        "Functional Programming",
+        "3D Computer Vision",
+        "Stochastic Modeling of Cognitive Processes"
+      ]
     },
     {
       "institution": "Birla Institute of Technology, Mesra",
@@ -190,7 +197,7 @@
       "keywords": ["Git", "LaTeX"]
     }
   ],
-  
+
   "references": [
     {
       "name": "Prof. Dr. Sebastian Vollmer",

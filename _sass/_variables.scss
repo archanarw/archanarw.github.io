@@ -15,38 +15,34 @@ $cyan-color: #2698ba !default;
 $light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
 $green-color: #00ab37 !default;
 $green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
+$green-color-dark: #4f7a5a !default;
 $green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #6B8E6B !default; // Sage green
+$green-color-bright: #86a98c !default;
+$purple-color: #4f7a5a !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Brown color palette for the theme
-$brown-color: #A68B5B !default; // Light brown
-$brown-color-light: #D4C4A8 !default; // Very light brown
-$brown-color-dark: #8B7355 !default; // Dark brown
+$grey-color: #667568 !default;
+$grey-color-light: #eaf1e8;
+$grey-color-dark: #26382c;
+$grey-900: #304438;
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+$white-color: #f7faf5 !default;
+$black-color: #26382c !default;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$brown-color: #b7c98a !default;
+$brown-color-light: #eaf1e8 !default;
+$brown-color-dark: #4f7a5a !default;
 
 // Theme colors
 
 $code-bg-color-light: rgba($brown-color-light, 0.3);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-dark: #304438 !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";
-
-// Tabler icons location
-$ti-font-path: "../fonts";
 
 // Back To Top button config
 $back-to-top-z-index: 10;
@@ -55,3 +51,6 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// Max width default
+$max-content-width: 930px !default;

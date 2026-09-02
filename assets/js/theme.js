@@ -1,7 +1,6 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle between light and dark themes. Default is "system" (set on first load),
-// but clicking the toggle only rotates between explicit light and dark settings.
+// Toggle between explicit light and dark settings.
 let toggleThemeSetting = () => {
   if (determineComputedTheme() == "dark") {
     setThemeSetting("light");
@@ -27,6 +26,7 @@ let applyTheme = () => {
   setHighlight(theme);
   setGiscusTheme(theme);
   setSearchTheme(theme);
+  updateCalendarUrl();
 
   // if mermaid is not defined, do nothing
   if (typeof mermaid !== "undefined") {
@@ -242,11 +242,19 @@ let setSearchTheme = (theme) => {
   }
 };
 
+// Keep this comfortably longer than the 240ms transition-duration in
+// _utilities.scss. Removing the class mid-transition snaps every element still
+// interpolating straight to its final colour, which reads as a flicker; at the
+// previous 260ms there were only 20ms of slack, so one slow frame during the
+// repaint was enough to truncate it.
+const THEME_TRANSITION_MS = 240;
+const THEME_TRANSITION_CLEANUP_MS = THEME_TRANSITION_MS + 120;
+
 let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
     document.documentElement.classList.remove("transition");
-  }, 500);
+  }, THEME_TRANSITION_CLEANUP_MS);
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
@@ -293,4 +301,34 @@ let initTheme = () => {
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ matches }) => {
     applyTheme();
   });
+};
+
+// Get the appropriate background color for Google Calendar based on current theme
+let getCalendarBgColor = () => {
+  let theme = determineComputedTheme();
+  return theme === "dark" ? "333333" : "f9f9f9";
+};
+
+// Get the Google Calendar embed URL with the correct background color
+let getCalendarUrl = (calendarId, timezone = "UTC") => {
+  const baseUrl = "https://calendar.google.com/calendar/embed";
+  const params = new URLSearchParams({
+    src: calendarId,
+    ctz: timezone,
+    mode: "WEEK",
+    showTitle: "0",
+    showPrint: "0",
+    showCalendars: "0",
+    showTabs: "0",
+    bgcolor: getCalendarBgColor(),
+  });
+  return `${baseUrl}?${params.toString()}`;
+};
+
+// Update the calendar iframe src to apply theme changes
+let updateCalendarUrl = () => {
+  const iframe = document.getElementById("calendar-iframe");
+  if (iframe && iframe.dataset.calendarId) {
+    iframe.src = getCalendarUrl(iframe.dataset.calendarId, iframe.dataset.timezone || "UTC");
+  }
 };

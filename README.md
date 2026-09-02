@@ -1,63 +1,57 @@
 # Archana Warrier Website
 
-Personal academic site built with Jekyll and adapted from `al-folio`.
+Personal academic site built with Jekyll and adapted from
+[`al-folio`](https://github.com/alshedivat/al-folio). The site uses the al-folio
+v1 plugin architecture while keeping Archana's content and custom styling in
+this repository.
 
 ## Repository structure
 
-- `_pages/` contains top-level pages such as the homepage, publications, projects, CV, and news.
-- `_projects/` contains one markdown file per project card and project detail page.
-- `_news/` contains short news entries shown on the homepage and on `/news/`.
+- `_pages/` contains the homepage, publications, projects, CV, and news pages.
+- `_projects/` contains one Markdown file per project.
+- `_news/` contains short updates shown on the homepage and `/news/`.
 - `_bibliography/papers.bib` powers the publications page.
-- `_data/navigation.yml` controls the navbar order and labels.
-- `assets/` contains images, PDFs, and other static files linked from pages.
-
-## Add a new page
-
-1. Create a markdown file in `_pages/`.
-2. Add front matter like this:
-
-```md
----
-layout: page
-title: Notes
-permalink: /notes/
----
-
-Page content goes here.
-```
-
-3. Add the page to `_data/navigation.yml` if it should appear in the navbar.
-
-## Add a new project
-
-1. Create a markdown file in `_projects/`.
-2. Use front matter like this:
-
-```md
----
-layout: page
-title: Project Title
-description: One-line summary shown on the projects page.
-importance: 6
----
-```
-
-3. Add any linked files under `assets/` and reference them with `relative_url`.
-
-## Common edits
-
-- Update the homepage text in `_pages/about.md`.
-- Update contact links in `_data/socials.yml`.
-- Update news items by adding files to `_news/`.
-- Update publications in `_bibliography/papers.bib`.
-- Update CV content in `_data/cv.yml` and the PDF in `assets/pdf/CV.pdf`.
+- `_data/cv.yml` and `assets/pdf/CV.pdf` contain the web and downloadable CVs.
+- `_data/navigation.yml` controls the navbar.
+- `assets/` contains images, PDFs, embeds, and other static files.
 
 ## Local development
 
-Install dependencies, then run the Jekyll server:
+Install Ruby and Node dependencies, then build the site:
+
+```bash
+bundle install
+npm install
+bundle exec jekyll build
+```
+
+For a local preview:
 
 ```bash
 bundle exec jekyll serve
 ```
 
-If you use the npm tooling in this repo for asset management, run `npm install` first.
+Do not edit `_site/`; Jekyll generates it.
+
+## Common content updates
+
+- Edit the homepage biography in `_pages/about.md`.
+- Add projects under `_projects/` and news items under `_news/`.
+- Update publications in `_bibliography/papers.bib`.
+- Update the web CV in `_data/cv.yml` and replace `assets/pdf/CV.pdf` when the
+  downloadable CV changes.
+- Update contact links in `_data/socials.yml`.
+
+Internal links and asset references should use Jekyll's `relative_url` filter.
+
+## al-folio v1 overrides
+
+Most layouts and runtime assets come from pinned al-folio gems. The small set of
+site-owned overrides is tracked in `.al-folio-overrides.yml`. After changing an
+override or upgrading the gems, run:
+
+```bash
+bundle exec al-folio upgrade audit
+bundle exec al-folio upgrade overrides audit
+bundle exec jekyll build
+```
