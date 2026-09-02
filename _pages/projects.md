@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of research projects.
+description: Research projects I am working/have worked on in the past. 
 ---
 
 <div class="projects">

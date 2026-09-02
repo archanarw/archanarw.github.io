@@ -204,11 +204,17 @@
     </div>
 
     {% assign poster_is_image = false %}
+    {% assign poster_path = '' %}
     {% if entry.poster %}
       {% assign poster_extension = entry.poster | split: '.' | last | downcase %}
       {% assign poster_image_extensions = 'png,jpg,jpeg,webp' | split: ',' %}
       {% if poster_image_extensions contains poster_extension %}
         {% assign poster_is_image = true %}
+        {% if entry.poster contains '://' %}
+          {% assign poster_path = entry.poster %}
+        {% else %}
+          {% assign poster_path = entry.poster | remove_first: '../img/' | prepend: '/assets/img/' | relative_url %}
+        {% endif %}
       {% endif %}
     {% endif %}
 
@@ -268,7 +274,7 @@
       {% endif %}
       {% if entry.poster %}
         {% if poster_is_image %}
-          <a class="poster btn btn-sm z-depth-0" role="button">Poster</a>
+          <a href="{{ poster_path }}" class="poster btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">Poster</a>
         {% elsif entry.poster contains '://' %}
           <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
         {% else %}
@@ -404,11 +410,6 @@
     {% endif %}
 
     {% if entry.poster and poster_is_image %}
-      {% if entry.poster contains '://' %}
-        {% assign poster_path = entry.poster %}
-      {% else %}
-        {% assign poster_path = entry.poster | prepend: '/assets/pdf/' | relative_url %}
-      {% endif %}
       <div class="poster hidden">
         <img class="img-fluid rounded z-depth-1" src="{{ poster_path }}" alt="{{ entry.title }} poster">
       </div>

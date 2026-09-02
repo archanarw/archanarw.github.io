@@ -1,18 +1,16 @@
 {
   "basics": {
     "name": "Archana Warrier",
-    "label": "MSc in Computer Science",
+    "label": "PhD student",
     "image": "",
-    "email": "archanarw@gmail.com",
-    "phone": "",
+    "email": "archana.warrier@tu-darmstadt.de",
     "url": "https://archanarw.github.io/",
-    "summary": "MSc in Computer Science from Technische Universität Kaiserslautern. Research interests in AI systems for scientific reasoning, probabilistic inference, and world model learning.",
+    "summary": "PhD student at Technische Universität Darmstadt, advised by Angela Yu in the Computational Modelling of Intelligent Systems lab. Research interests in AI systems for scientific reasoning, probabilistic inference, and world model learning.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "New York City",
-      "countryCode": "US",
-      "region": "NY"
+      "address": "S1|15 212, Alexanderstr. 10",
+      "postalCode": "64283",
+      "city": "Darmstadt",
+      "countryCode": "DE"
     },
     "profiles": [
       {
@@ -33,6 +31,14 @@
     ]
   },
   "work": [
+    {
+      "name": "Technische Universität Darmstadt",
+      "position": "PhD student",
+      "url": "https://www.tu-darmstadt.de",
+      "startDate": "2026-09-01",
+      "endDate": "",
+      "summary": "PhD student at Technische Universität Darmstadt, advised by Angela Yu in the Computational Modelling of Intelligent Systems lab."
+    },
     {
       "name": "Basis, New York City, NY",
       "position": "Research Trainee",
@@ -200,11 +206,6 @@
 
   "references": [
     {
-      "name": "Prof. Dr. Sebastian Vollmer",
-      "icon": "fa-solid fa-user-graduate",
-      "reference": "Professor at DFKI, Kaiserslautern, Germany."
-    },
-    {
       "name": "Zenna Tavares",
       "icon": "fa-solid fa-user-graduate",
       "reference": "Co-founder and Director of Basis."
@@ -213,6 +214,11 @@
       "name": "Kevin Ellis",
       "icon": "fa-solid fa-user-graduate",
       "reference": "Assistant Professor at Cornell University."
+    },
+    {
+      "name": "Prof. Dr. Sebastian Vollmer",
+      "icon": "fa-solid fa-user-graduate",
+      "reference": "Professor at DFKI, Kaiserslautern, Germany."
     }
   ],
   "projects": [

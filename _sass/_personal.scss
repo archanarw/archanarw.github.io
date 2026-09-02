@@ -18,3 +18,10 @@
     }
   }
 }
+
+// Tailwind's `collapse` visibility utility overrides the Bootstrap-compatible
+// navbar class. The responsive navbar already controls its open state with
+// `display`, so keep only this navbar instance visible.
+.navbar .navbar-collapse.collapse {
+  visibility: visible;
+}
