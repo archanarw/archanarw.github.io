@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Archana
 last_name: Warrier
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Computer Science Masters Student at Technische Universität Kaiserslautern. Research interests in human cognition, computational modeling of intelligence, and probabilistic inference.
+  PhD Student at Technische Universität Darmstadt. Interested in the computational principles underlying goal-directed collaboration and in how insights from biology can inform the design of collaborative AI.
 footer_text: >
   Built with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
