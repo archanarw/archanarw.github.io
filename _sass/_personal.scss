@@ -25,3 +25,18 @@
 .navbar .navbar-collapse.collapse {
   visibility: visible;
 }
+
+.probmods-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100%;
+
+  a:last-child {
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+}
