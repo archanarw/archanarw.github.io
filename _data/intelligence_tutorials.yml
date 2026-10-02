@@ -1,0 +1,34 @@
+# Tutorial notebooks for Yu (2026), "The Art of Making Problems Simple".
+# Source notebooks live in Omega.jl/OmegaExamples/src/intelligence.
+# `_scripts/pluto/build.jl` turns each notebook into a page in `_tutorials/`;
+# `pluto_land` is the hosted, runnable version of the same notebook.
+- chapter: 1
+  slug: worlds-tasks-and-representations
+  title: Worlds, tasks, and representations
+  description: A representation keeps the distinctions a question needs; for a coin-flip model, the head count is enough.
+  pluto_land: https://pluto.land/n/frk46iuj
+- chapter: 2
+  slug: generators-orbits-and-quotients
+  title: Generators, orbits, and quotients
+  description: Derive the head-count representation by composing adjacent swaps and collapsing each orbit to one coordinate.
+  pluto_land: https://pluto.land/n/digjcnvq
+- chapter: 3
+  slug: quotients-and-normal-forms
+  title: Quotients and normal forms
+  description: Choose among candidate generators for a task, then describe the quotient so the task becomes cheap to compute.
+  pluto_land: https://pluto.land/n/6m3hj9cy
+- chapter: 4
+  slug: representational-revision
+  title: Representational revision
+  description: When the task changes, how a learner can tell its representation is insufficient and what to add.
+  pluto_land: https://pluto.land/n/qpm6j7m1
+- chapter: 5
+  slug: transfer-and-abstract-reasoning
+  title: Transfer and abstract reasoning
+  description: Carry structure to a new domain along a structure-preserving map, using a Raven's-style matrix puzzle.
+  pluto_land: https://pluto.land/n/t9c8tp7s
+- chapter: 6
+  slug: action-and-identifiability
+  title: Action and identifiability
+  description: Two coin mechanisms that no amount of observation can separate, but a single intervention can.
+  pluto_land: https://pluto.land/n/45u5rbb7

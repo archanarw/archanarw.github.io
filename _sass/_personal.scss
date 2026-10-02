@@ -41,6 +41,58 @@
   }
 }
 
+// Posts generated from Pluto notebooks (_scripts/pluto/build.jl).
+.notebook-callout {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--global-theme-color);
+  background: var(--global-code-bg-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+
+  .btn {
+    margin: 0 0.5rem 0.25rem 0;
+  }
+}
+
+.notebook-setup {
+  margin-bottom: 1rem;
+
+  summary {
+    cursor: pointer;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+}
+
+// Cell outputs sit directly under the code that produced them.
+.notebook-output {
+  margin-top: -0.75rem;
+
+  pre {
+    background: transparent;
+    border-left: 2px solid var(--global-divider-color);
+    border-radius: 0;
+    font-size: 0.8rem;
+    max-height: 28rem;
+    overflow: auto;
+  }
+}
+
+.notebook-series-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .next {
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
 // Phone layout. The theme is built for desktop widths: the floated profile
 // photo squeezes the intro text, the fixed footer covers part of the screen,
 // and long URLs and headings overflow their cards.

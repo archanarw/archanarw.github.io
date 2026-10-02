@@ -1,0 +1,41 @@
+{% comment %}
+  Links for a page generated from a Pluto notebook. Expects `page.series`
+  (a file in _data/) and `page.chapter`. Pass position="top" or "bottom".
+{% endcomment %}
+{% assign series = site.data[page.series] %}
+{% assign entry = series | where: 'chapter', page.chapter | first %}
+{% if include.position == 'top' %}
+  <div class="notebook-callout">
+    <p>
+      Chapter {{ page.chapter }} of {{ series.size }} in a tutorial series on
+      <a href="https://doi.org/10.31234/osf.io/pghzn_v3">Yu (2026), <em>The Art of Making Problems Simple</em></a
+      >. This page is a static copy of a <a href="https://plutojl.org/">Pluto</a> notebook.
+    </p>
+    {% if entry.pluto_land %}
+      <a class="btn btn-sm z-depth-0" role="button" href="{{ entry.pluto_land }}">
+        <i class="fa-solid fa-play"></i> Run or download the notebook on pluto.land
+      </a>
+    {% endif %}
+    <a class="btn btn-sm z-depth-0" role="button" href="{{ '/projects/intelligence-tutorials.html' | relative_url }}">
+      <i class="fa-solid fa-list"></i> All chapters
+    </a>
+  </div>
+{% else %}
+  {% assign prev_chapter = page.chapter | minus: 1 %}
+  {% assign next_chapter = page.chapter | plus: 1 %}
+  {% assign prev_entry = series | where: 'chapter', prev_chapter | first %}
+  {% assign next_entry = series | where: 'chapter', next_chapter | first %}
+  <hr>
+  <nav class="notebook-series-nav" aria-label="Tutorial chapters">
+    {% if prev_entry %}
+      {% assign prev_page = site.tutorials | where: 'chapter', prev_chapter | where: 'series', page.series | first %}
+      <a class="prev" href="{{ prev_page.url | relative_url }}">&larr; {{ prev_entry.chapter }}. {{ prev_entry.title }}</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+    {% if next_entry %}
+      {% assign next_page = site.tutorials | where: 'chapter', next_chapter | where: 'series', page.series | first %}
+      <a class="next" href="{{ next_page.url | relative_url }}">{{ next_entry.chapter }}. {{ next_entry.title }} &rarr;</a>
+    {% endif %}
+  </nav>
+{% endif %}
