@@ -53,6 +53,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write # comment the preview link on PRs
 
 jobs:
   deploy:
@@ -100,3 +101,22 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+      # PR previews go to Cloudflare Pages; the live site stays on GitHub Pages.
+      # Secrets are not available to PRs from forks, so those are skipped.
+      - name: Deploy PR preview 🔍
+        id: preview
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          preCommands: wrangler pages project create archanarw-previews --production-branch=main || true
+          command: pages deploy _site --project-name=archanarw-previews --branch=pr-${{ github.event.pull_request.number }} --commit-dirty=true
+      - name: Comment preview link 💬
+        if: steps.preview.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIEW_URL: ${{ steps.preview.outputs.pages-deployment-alias-url || steps.preview.outputs.deployment-url }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --edit-last --create-if-none \
+            --body "Preview of this PR: $PREVIEW_URL (updated for ${{ github.event.pull_request.head.sha }})"
