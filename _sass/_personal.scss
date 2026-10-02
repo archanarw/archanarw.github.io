@@ -40,3 +40,47 @@
     grid-template-columns: 1fr;
   }
 }
+
+// Phone layout. The theme is built for desktop widths: the floated profile
+// photo squeezes the intro text, the fixed footer covers part of the screen,
+// and long URLs and headings overflow their cards.
+@media (max-width: 576px) {
+  .profile-photo {
+    float: none !important;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem !important;
+  }
+
+  // The theme's slightly transparent navbar lets page text show through
+  // the expanded menu.
+  .navbar {
+    opacity: 1;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  footer.fixed-bottom {
+    position: static;
+  }
+
+  .news .table-responsive {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-body h1,
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  article {
+    overflow-wrap: break-word;
+
+    a {
+      overflow-wrap: anywhere;
+    }
+  }
+}

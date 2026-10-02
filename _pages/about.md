@@ -12,7 +12,7 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-{% include figure.liquid path="assets/img/archana.jpg" alt="Archana Warrier" class="img-fluid rounded z-depth-1 float-right ml-3 mb-2" width="300" %}
+{% include figure.liquid path="assets/img/archana.jpg" alt="Archana Warrier" class="img-fluid rounded z-depth-1 float-right ml-3 mb-2 profile-photo" width="300" %}
 
 I'm interested in identifying and modeling the computational principles that underlie goal-directed collaboration, and in building AI systems grounded in those principles. Rather than copying biological mechanisms directly, I want to draw on the principles behind biological collaboration to build collaborative AI.
 
