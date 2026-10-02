@@ -8,3 +8,6 @@ _posts/2015-10-20-math.md
 _data/citations.yml
 assets/css/main.scss
 assets/probmods/**
+
+# Generated from Pluto notebooks by _scripts/pluto/build.jl
+_tutorials/
